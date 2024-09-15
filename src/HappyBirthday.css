@@ -1,0 +1,214 @@
+/* Overall container and typography */
+.birthday-container {
+    text-align: center;
+    margin-top: 50px;
+    color: #ff69b4;
+    padding: 20px;
+    animation: fadeIn 1.5s;
+  }
+  
+  .birthday-message {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: glow 2s infinite alternate;
+  }
+  
+  .message-detail {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  
+  /* Love hearts floating up */
+  .floating-hearts {
+    position: relative;
+    height: 250px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  
+  .heart {
+    position: absolute;
+    bottom: 0;
+    width: 220px;
+    height: 220px;
+    background-color: pink;
+    clip-path: polygon(50% 0%, 0% 35%, 15% 100%, 50% 80%, 85% 100%, 100% 35%);
+    animation: floatUp 7s infinite ease-in-out;
+  }
+  
+ /* Hearts container */
+.hearts-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  /* Common heart styles */
+  .heart {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #ff1493;
+    transform: rotate(-45deg);
+    animation: float 5s ease-in-out infinite;
+  }
+  
+  /* Individual hearts (to differentiate their animations) */
+  .heart1 {
+    top: 50%;
+    left: 20%;
+    animation-delay: 0s;
+  }
+  
+  .heart2 {
+    top: 30%;
+    left: 40%;
+    animation-delay: 1s;
+  }
+  
+  .heart3 {
+    top: 60%;
+    left: 60%;
+    animation-delay: 2s;
+  }
+  
+  .heart4 {
+    top: 20%;
+    left: 70%;
+    animation-delay: 3s;
+  }
+  
+  .heart5 {
+    top: 40%;
+    left: 90%;
+    animation-delay: 4s;
+  }
+  
+  /* Heart shape creation */
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff1493;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: 25px;
+  }
+  
+  /* Floating animation for hearts */
+  @keyframes float {
+    0% {
+      transform: translateY(0) rotate(-45deg);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50px) rotate(-45deg);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateY(0) rotate(-45deg);
+      opacity: 1;
+    }
+  }
+  
+  /* Love message */
+  .love-message {
+    font-size: 1.8rem;
+    color: #ff1493;
+    margin-bottom: 30px;
+    animation: loveGlow 1.5s infinite alternate;
+  }
+  
+  @keyframes loveGlow {
+    from {
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    }
+    to {
+      text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493;
+    }
+  }
+  
+  /* Doctor-themed icons */
+  .doctor-icons {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Celebrate button */
+  .celebrate-btn {
+    background-color: #ff69b4;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    transition: all 0.3s ease;
+  }
+  
+  .celebrate-btn:hover {
+    background-color: #ff1493;
+    box-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493;
+    transform: scale(1.1);
+  }
+  
+  /* Responsive design */
+  @media only screen and (max-width: 600px) {
+    .birthday-message {
+      font-size: 2.2rem;
+    }
+  
+    .message-detail {
+      font-size: 1.2rem;
+    }
+  
+    .floating-hearts {
+      height: 200px;
+    }
+  
+    .love-message {
+      font-size: 1.5rem;
+    }
+  
+    .doctor-icons {
+      font-size: 2.5rem;
+    }
+  
+    .celebrate-btn {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+    }
+    to {
+      text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493;
+    }
+  }
+  
