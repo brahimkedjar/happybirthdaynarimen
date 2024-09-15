@@ -68,7 +68,7 @@ const App = () => {
           ) : (
             <div className="wrong-feedback">
               <img src="/broken-heart.png" alt="Broken Heart" className="heart broken-heart" />
-              <p className="wrong-text">Men Niyteeekk dabaa -_-.</p>
+              <p className="wrong-text">wrongg answeerrrr dabaa -_-.</p>
             </div>
           )}
         </div>

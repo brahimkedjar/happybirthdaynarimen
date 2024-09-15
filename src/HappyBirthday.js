@@ -13,7 +13,6 @@ const HappyBirthday = () => {
         <span className="heart heart2"></span>
         <span className="heart heart3"></span>
         <span className="heart heart4"></span>
-        <span className="heart heart5"></span>
       </div>
       <div className="love-message">
         Your love is the best medicine! 💊💓
